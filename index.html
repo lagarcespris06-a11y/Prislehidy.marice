@@ -1,282 +1,439 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Beauty Glam</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    text-decoration:none;
-    list-style:none;
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:#fff5f8;
-    color:#333;
+font-family:'Poppins',sans-serif;
+background:#fff7fb;
+color:#333;
+overflow-x:hidden;
 }
+
+/* CONTENEDOR */
 
 .container{
-    max-width:1200px;
-    margin:0 auto;
-    padding:0 20px;
+max-width:1200px;
+margin:auto;
+padding:0 20px;
 }
 
-/* HEADER */
+img{
+width:100%;
+display:block;
+}
+
+/* MENU */
 
 .header{
-    background:linear-gradient(135deg,#ffb6c1,#ffdce3);
-    min-height:100vh;
+background:linear-gradient(135deg,#ffd1e6,#fff0f6);
+min-height:100vh;
 }
 
 .menu{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 0;
+position:sticky;
+top:0;
+background:#ffffffef;
+padding:20px 0;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+z-index:1000;
+backdrop-filter:blur(10px);
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
-    color:#ff0077;
-    font-size:32px;
-    font-weight:700;
+font-size:35px;
+font-weight:800;
+color:#ff0077;
+text-decoration:none;
 }
 
 .navbar ul{
-    display:flex;
-    gap:25px;
+display:flex;
+gap:30px;
+list-style:none;
 }
 
-.navbar ul li a{
-    color:#333;
-    font-weight:600;
-    transition:.3s;
+.navbar a{
+text-decoration:none;
+color:#333;
+font-weight:600;
+transition:.3s;
 }
 
-.navbar ul li a:hover{
-    color:#ff0077;
-}
-
-.header-content{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:50px;
-    padding:60px 0;
-}
-
-.header-txt{
-    flex:1;
-}
-
-.header-txt span{
-    color:#ff0077;
-    font-size:18px;
-    font-weight:600;
-}
-
-.header-txt h1{
-    font-size:60px;
-    line-height:1.1;
-    margin:20px 0;
-}
-
-.header-txt p{
-    font-size:18px;
-    margin-bottom:30px;
-    color:#555;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 35px;
-    background:#ff0077;
-    color:#fff;
-    border-radius:50px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#d60064;
-    transform:translateY(-5px);
-}
-
-.header-img{
-    flex:1;
-    text-align:center;
-}
-
-.header-img img{
-    width:100%;
-    max-width:500px;
-    border-radius:30px;
-    box-shadow:0 15px 30px rgba(0,0,0,.2);
-}
-
-/* PRODUCTOS */
-
-.products{
-    padding:100px 0;
-}
-
-.products h2{
-    text-align:center;
-    font-size:45px;
-    margin-bottom:15px;
-}
-
-.products p{
-    text-align:center;
-    color:#666;
-    margin-bottom:50px;
-}
-
-.product-content{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.product{
-    background:#fff;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-    transition:.3s;
-}
-
-.product:hover{
-    transform:translateY(-10px);
-}
-
-.product img{
-    width:100%;
-    height:280px;
-    object-fit:cover;
-}
-
-.product-info{
-    padding:25px;
-    text-align:center;
-}
-
-.product-info h3{
-    font-size:24px;
-}
-
-.price{
-    color:#ff0077;
-    font-size:24px;
-    font-weight:700;
-    margin:15px 0;
-}
-
-/* PROMO */
-
-.promo{
-    background:#ffe4ec;
-    padding:80px 20px;
-    text-align:center;
-}
-
-.promo h2{
-    font-size:45px;
-    margin-bottom:20px;
-}
-
-.promo p{
-    max-width:700px;
-    margin:0 auto 30px;
-}
-
-/* BLOG */
-
-.blog{
-    padding:100px 0;
-}
-
-.blog-title{
-    text-align:center;
-    font-size:45px;
-    margin-bottom:50px;
-}
-
-.blog-content{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-}
-
-.blog-card{
-    background:#fff;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-}
-
-.blog-card img{
-    width:100%;
-}
-
-.blog-text{
-    padding:25px;
-}
-
-/* FOOTER */
-
-.footer{
-    background:#222;
-    padding:50px 20px;
-    text-align:center;
-}
-
-.footer p{
-    color:#fff;
+.navbar a:hover{
+color:#ff0077;
 }
 
 /* CARRITO */
 
 .carrito{
-    position:fixed;
-    top:20px;
-    right:20px;
-    background:#fff;
-    padding:15px 25px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
-    z-index:1000;
+position:fixed;
+bottom:20px;
+right:20px;
+background:#fff;
+padding:15px 25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+z-index:2000;
 }
 
 .carrito h3{
-    color:#ff0077;
+color:#ff0077;
+}
+
+/* HERO */
+
+.hero{
+padding:80px 0;
+}
+
+.hero-content{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:60px;
+align-items:center;
+}
+
+.hero-text h1{
+font-size:70px;
+line-height:1.1;
+margin-bottom:20px;
+color:#111;
+}
+
+.hero-text span{
+display:inline-block;
+background:#fff;
+padding:10px 20px;
+border-radius:50px;
+font-weight:700;
+color:#ff0077;
+margin-bottom:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.hero-text p{
+font-size:18px;
+line-height:1.8;
+margin-bottom:30px;
+color:#555;
+}
+
+.btn{
+display:inline-block;
+padding:16px 35px;
+background:#ff0077;
+color:#fff;
+text-decoration:none;
+border-radius:50px;
+font-weight:700;
+border:none;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+background:#d80067;
+}
+
+.hero-img img{
+border-radius:35px;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+animation:flotar 3s infinite ease-in-out;
+}
+
+@keyframes flotar{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* NOSOTROS */
+
+.nosotros{
+padding:120px 0;
+background:#fff;
+}
+
+.nosotros-content{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:70px;
+align-items:center;
+}
+
+.nosotros-img img{
+border-radius:35px;
+box-shadow:0 20px 45px rgba(0,0,0,.18);
+transition:.4s;
+}
+
+.nosotros-img img:hover{
+transform:scale(1.02);
+}
+
+.subtitulo{
+display:inline-block;
+background:#ffe0ef;
+color:#ff0077;
+padding:10px 20px;
+border-radius:50px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.nosotros-text h2{
+font-size:65px;
+line-height:1.1;
+margin-bottom:20px;
+color:#111;
+}
+
+.linea{
+width:80px;
+height:5px;
+background:#ff0077;
+border-radius:20px;
+margin-bottom:30px;
+}
+
+.nosotros-text p{
+font-size:20px;
+line-height:1.9;
+color:#555;
+margin-bottom:20px;
+}
+
+.cards-info{
+display:flex;
+gap:25px;
+margin:40px 0;
+flex-wrap:wrap;
+}
+
+.card-mini{
+background:#fff;
+padding:25px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+text-align:center;
+min-width:150px;
+transition:.3s;
+}
+
+.card-mini:hover{
+transform:translateY(-8px);
+}
+
+.card-mini h3{
+font-size:40px;
+margin-bottom:10px;
+}
+
+/* PRODUCTOS */
+
+.products{
+padding:120px 0;
+background:#fff7fb;
+}
+
+.title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.title h2{
+font-size:55px;
+margin-bottom:10px;
+}
+
+.title p{
+color:#666;
+font-size:18px;
+}
+
+.product-content{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.product{
+background:#fff;
+border-radius:30px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.product:hover{
+transform:translateY(-10px);
+}
+
+.product img{
+height:320px;
+object-fit:cover;
+}
+
+.product-info{
+padding:25px;
+text-align:center;
+}
+
+.product-info h3{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.price{
+font-size:30px;
+color:#ff0077;
+font-weight:800;
+margin:20px 0;
+}
+
+/* INSTAGRAM */
+
+.instagram{
+padding:120px 0;
+background:linear-gradient(135deg,#ff0077,#ff5ca8);
+text-align:center;
+color:#fff;
+}
+
+.instagram h2{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.instagram p{
+font-size:18px;
+margin-bottom:30px;
+}
+
+.insta-btn{
+background:#fff;
+color:#ff0077;
+}
+
+/* CONTACTO */
+
+.contacto{
+padding:120px 0;
+background:#fff;
+}
+
+.formulario{
+max-width:700px;
+margin:auto;
+background:#fff7fb;
+padding:40px;
+border-radius:35px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.input-group{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+input,
+textarea{
+padding:15px;
+border-radius:15px;
+border:1px solid #ddd;
+font-family:'Poppins',sans-serif;
+font-size:16px;
+}
+
+textarea{
+height:150px;
+resize:none;
+}
+
+/* FOOTER */
+
+.footer{
+background:#1f1f1f;
+padding:50px 20px;
+text-align:center;
+}
+
+.footer p{
+color:#fff;
 }
 
 /* RESPONSIVE */
 
 @media(max-width:991px){
 
-    .header-content{
-        flex-direction:column;
-        text-align:center;
-    }
+.hero-content,
+.nosotros-content{
+grid-template-columns:1fr;
+text-align:center;
+}
 
-    .header-txt h1{
-        font-size:45px;
-    }
+.hero-text h1{
+font-size:45px;
+}
 
-    .navbar ul{
-        gap:15px;
-    }
+.nosotros-text h2{
+font-size:50px;
+}
+
+.linea{
+margin:auto auto 30px;
+}
+
+.cards-info{
+justify-content:center;
+}
+
+.nav{
+flex-direction:column;
+gap:20px;
+}
+
+.navbar ul{
+flex-wrap:wrap;
+justify-content:center;
+}
 
 }
 
@@ -285,199 +442,356 @@ body{
 
 <body>
 
+<!-- CARRITO -->
+
 <div class="carrito">
-    <h3>🛒 Carrito: <span id="contador">0</span></h3>
+
+<h3>
+🛒 Carrito:
+<span id="contador">0</span>
+</h3>
+
 </div>
+
+<!-- HEADER -->
 
 <header class="header" id="inicio">
 
-<div class="container">
-
 <div class="menu">
 
-<a href="#" class="logo">Beauty Glam</a>
+<div class="container nav">
+
+<a href="#" class="logo">
+Beauty Glam
+</a>
 
 <nav class="navbar">
+
 <ul>
-<li><a href="#inicio">Inicio</a></li>
-<li><a href="#productos">Productos</a></li>
-<li><a href="#promo">Promociones</a></li>
-<li><a href="#blog">Blog</a></li>
-<li><a href="#footer">Contacto</a></li>
+
+<li>
+<a href="#inicio">Inicio</a>
+</li>
+
+<li>
+<a href="#nosotros">Nosotros</a>
+</li>
+
+<li>
+<a href="#productos">Productos</a>
+</li>
+
+<li>
+<a href="#contacto">Contacto</a>
+</li>
+
 </ul>
+
 </nav>
 
 </div>
 
-<div class="header-content">
+</div>
 
-<div class="header-txt">
+<!-- HERO -->
 
-<span>✨ Nueva colección 2026 ✨</span>
+<section class="hero container">
+
+<div class="hero-content">
+
+<div class="hero-text">
+
+<span>
+ Beauty Premium 
+</span>
 
 <h1>
-Maquillaje moderno y elegante
+Las mejores marcas de maquillaje
 </h1>
 
 <p>
-Descubre productos originales con excelente calidad
-y promociones increíbles.
+Descubre productos premium de Dior,
+e.l.f, Rare Beauty y Fenty Beauty.
 </p>
 
-<a href="#productos" class="btn" id="comprar">
+<a href="#productos" class="btn">
 Comprar ahora
 </a>
 
 </div>
 
-<div class="header-img">
-<img src="Imagenes/maquillaje.jpg" alt="">
-</div>
+<div class="hero-img">
+
+<img src="Imagenes/maquillaje3.jpg">
 
 </div>
 
 </div>
+
+</section>
 
 </header>
 
-<section class="products container" id="productos">
+<!-- NOSOTROS -->
 
-<h2>Productos Destacados</h2>
+<section class="nosotros" id="nosotros">
+
+<div class="container">
+
+<div class="nosotros-content">
+
+<div class="nosotros-img">
+
+<img src="Imagenes/maquillaje2.jpg" alt="Beauty Glam">
+
+</div>
+
+<div class="nosotros-text">
+
+<span class="subtitulo">
+ BEAUTY GLAM 
+</span>
+
+<h2>
+Sobre Nosotros
+</h2>
+
+<div class="linea"></div>
 
 <p>
-Los productos más vendidos de nuestra tienda.
+En Beauty Glam trabajamos con las mejores marcas
+de maquillaje del mundo como Dior, e.l.f,
+Rare Beauty y Fenty Beauty.
 </p>
+
+<p>
+Nuestro objetivo es ayudarte a sentirte
+segura, elegante y hermosa con productos
+originales y premium.
+</p>
+
+<div class="cards-info">
+
+<div class="card-mini">
+
+<h3>💖</h3>
+
+<p>
+Belleza premium
+</p>
+
+</div>
+
+<div class="card-mini">
+
+<h3>🚚</h3>
+
+<p>
+Envíos rápidos
+</p>
+
+</div>
+
+<div class="card-mini">
+
+<h3>⭐</h3>
+
+<p>
+Calidad original
+</p>
+
+</div>
+
+</div>
+
+<button class="btn" id="infoBtn">
+Más información
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTOS -->
+
+<section class="products" id="productos">
+
+<div class="container">
+
+<div class="title">
+
+<h2>
+Productos Destacados
+</h2>
+
+<p>
+Marcas famosas y productos premium.
+</p>
+
+</div>
 
 <div class="product-content">
 
 <div class="product">
-<img src="Imagenes/Base1.jpg" alt="">
+
+<img src="Imagenes/Base7.jpg">
 
 <div class="product-info">
-<h3>Base Premium</h3>
-<p>Acabado profesional</p>
-<div class="price">$200</div>
 
-<a href="#" class="btn agregar">
-Agregar al carrito
-</a>
+<h3>Dior Forever Skin</h3>
+
+<p>Base profesional Dior</p>
+
+<div class="price">$85</div>
+
+<button class="btn agregar">
+Agregar
+</button>
 
 </div>
+
 </div>
 
 <div class="product">
-<img src="Imagenes/Labios.jpg" alt="">
+
+<img src="Imagenes/labios6.jpg">
 
 <div class="product-info">
-<h3>Gloss Pink</h3>
-<p>Brillo intenso</p>
-<div class="price">$180</div>
 
-<a href="#" class="btn agregar">
-Agregar al carrito
-</a>
+<h3>Dior Lip Oil</h3>
+
+<p>Brillo premium</p>
+
+<div class="price">$55</div>
+
+<button class="btn agregar">
+Agregar
+</button>
 
 </div>
+
 </div>
 
 <div class="product">
-<img src="Imagenes/Corrector1.jpg" alt="">
+
+<img src="Imagenes/prmer6.jpg">
 
 <div class="product-info">
-<h3>Corrector Pro</h3>
-<p>Cobertura total</p>
-<div class="price">$220</div>
 
-<a href="#" class="btn agregar">
-Agregar al carrito
-</a>
+<h3>e.l.f Power Grip</h3>
+
+<p>Primer viral</p>
+
+<div class="price">$20</div>
+
+<button class="btn agregar">
+Agregar
+</button>
 
 </div>
+
+</div>
+
+<div class="product">
+
+<img src="Imagenes/labios7.jpg">
+
+<div class="product-info">
+
+<h3>Fenty Beauty Gloss</h3>
+
+<p>Gloss premium</p>
+
+<div class="price">$40</div>
+
+
+<button class="btn agregar">
+Agregar
+</button>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<section class="promo" id="promo">
+<!-- INSTAGRAM -->
 
-<h2>Ofertas Especiales</h2>
+<section class="instagram">
 
-<p>
-Aprovecha descuentos exclusivos en maquillaje
-y cuidado personal.
-</p>
+<div class="container">
 
-<a href="#" class="btn" id="oferta">
-Ver ofertas
-</a>
-
-</section>
-
-<section class="blog container" id="blog">
-
-<h2 class="blog-title">
-Nuevas Tendencias
+<h2>
+Síguenos en Instagram
 </h2>
 
-<div class="blog-content">
-
-<div class="blog-card">
-<img src="Imagenes/blog2.jpg" alt="">
-
-<div class="blog-text">
-<h3>Maquillaje Natural</h3>
-
 <p>
-Aprende nuevas técnicas modernas.
+Tips de maquillaje y promociones exclusivas.
 </p>
 
-<a href="#" class="btn leer">
-Leer más
+<a href="https://instagram.com" target="_blank" class="btn insta-btn">
+Ir a Instagram
 </a>
 
 </div>
-</div>
 
-<div class="blog-card">
-<img src="Imagenes/blog3.jpg" alt="">
+</section>
 
-<div class="blog-text">
-<h3>Skincare 2026</h3>
+<!-- CONTACTO -->
 
-<p>
-Los mejores cuidados para tu piel.
-</p>
+<section class="contacto" id="contacto">
 
-<a href="#" class="btn leer">
-Leer más
-</a>
+<div class="container">
 
-</div>
-</div>
+<div class="title">
 
-<div class="blog-card">
-<img src="Imagenes/blog4.jpg" alt="">
-
-<div class="blog-text">
-<h3>Productos Premium</h3>
+<h2>
+Contacto
+</h2>
 
 <p>
-Productos recomendados por expertos.
+Envíanos un mensaje.
 </p>
 
-<a href="#" class="btn leer">
-Leer más
-</a>
+</div>
+
+<div class="formulario">
+
+<form id="formulario">
+
+<div class="input-group">
+
+<input type="text" placeholder="Tu nombre" required>
+
+<input type="email" placeholder="Tu correo" required>
+
+<textarea placeholder="Escribe tu mensaje"></textarea>
+
+<button type="submit" class="btn">
+Enviar mensaje
+</button>
 
 </div>
+
+</form>
+
 </div>
 
 </div>
 
 </section>
 
-<footer class="footer" id="footer">
+<!-- FOOTER -->
+
+<footer class="footer">
 
 <p>
 © 2026 Beauty Glam | Todos los derechos reservados
@@ -487,74 +801,88 @@ Leer más
 
 <script>
 
-// CONTADOR CARRITO
+/* CARRITO */
 
 let contador = 0;
 
-const botonesAgregar = document.querySelectorAll(".agregar");
+const contadorElemento =
+document.getElementById('contador');
 
-botonesAgregar.forEach(function(boton){
+const botonesAgregar =
+document.querySelectorAll('.agregar');
 
-    boton.addEventListener("click", function(e){
+botonesAgregar.forEach((boton)=>{
 
-        e.preventDefault();
+boton.addEventListener('click',()=>{
 
-        contador++;
+contador++;
 
-        document.getElementById("contador").innerText = contador;
+contadorElemento.textContent = contador;
 
-        let producto =
-        this.parentElement.querySelector("h3").innerText;
+const producto =
+boton.parentElement.querySelector('h3').textContent;
 
-        alert(producto + " agregado al carrito 🛒");
-
-    });
-
-});
-
-
-// BOTON OFERTAS
-
-document.getElementById("oferta")
-.addEventListener("click", function(e){
-
-    e.preventDefault();
-
-    alert("🔥 Nuevas ofertas disponibles");
+mostrarMensaje(producto + ' agregado 🛒');
 
 });
 
+});
 
-// BOTONES LEER MAS
+/* CONTACTO */
 
-const botonesLeer = document.querySelectorAll(".leer");
+const formulario =
+document.getElementById('formulario');
 
-botonesLeer.forEach(function(boton){
+formulario.addEventListener('submit',(e)=>{
 
-    boton.addEventListener("click", function(e){
+e.preventDefault();
 
-        e.preventDefault();
+mostrarMensaje('✅ Mensaje enviado correctamente');
 
-        alert("📖 Próximamente más información");
-
-    });
+formulario.reset();
 
 });
 
+/* NOSOTROS */
 
-// MENU
+const infoBtn =
+document.getElementById('infoBtn');
 
-const enlaces = document.querySelectorAll(".navbar a");
+infoBtn.addEventListener('click',()=>{
 
-enlaces.forEach(function(link){
-
-    link.addEventListener("click", function(){
-
-        console.log("Navegando a " + this.innerText);
-
-    });
+mostrarMensaje('✨ Productos 100% originales');
 
 });
+
+/* MENSAJES */
+
+function mostrarMensaje(texto){
+
+const mensaje =
+document.createElement('div');
+
+mensaje.textContent = texto;
+
+mensaje.style.position = 'fixed';
+mensaje.style.bottom = '30px';
+mensaje.style.left = '30px';
+mensaje.style.background = '#ff0077';
+mensaje.style.color = '#fff';
+mensaje.style.padding = '15px 25px';
+mensaje.style.borderRadius = '15px';
+mensaje.style.boxShadow = '0 10px 25px rgba(0,0,0,.2)';
+mensaje.style.zIndex = '3000';
+mensaje.style.fontWeight = '600';
+
+document.body.appendChild(mensaje);
+
+setTimeout(()=>{
+
+mensaje.remove();
+
+},2500);
+
+}
 
 </script>
 
