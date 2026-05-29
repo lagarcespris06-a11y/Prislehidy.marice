@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    list-style:none;
+
+}
+body {
+     font-family: "Poppins", sans-serif;
+}
+
+img{
+    max-width:100%;
+}
+
+.container{
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.header{
+    display:flex;
+    align-items: center;
+    min-height:80vh;
+    background:linear-gradient(
+        90deg,
+        rgb(230, 159, 202) 0%
+        rgb(240, 120, 210) 50%
+        rgb(177, 48, 145) 100%
+    );  
+    padding: 70px 0;
+}
+
+.menu{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    font-size:  25px;
+    color: #f00783;
+    text-transform: uppercase;
+    font-weight:800;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: lef;
+}
+
+.menu .navbar ul li a {
+    font-size: 16px;
+    padding: 20px;
+    color: #0a0508;
+    display: block;
+}
+.menu .navbar ul li a:hover{
+    color: #f00783;
+
+}
+#menu {
+    display: none;
+
+}
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display:none;
+}
+
+.submenu{
+    position: relative;
+}
+
+.submenu #carrito{
+    display:none;
+}
+
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+    backdrop-filter:blur(10px);
+    top:100%;
+    z-index:1;
+    background-color: #0a0508;
+    padding: 20px;
+    min-width:400px;
+}
+
+table{
+    width: 100%;
+}
+
+th, td{
+    color: #e7449b;
+}
+
+.borrar {
+    background-color: #f00783;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: #da549b;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.header-content {
+    display:flex;
+    align-items:center;
+    flex: 1;                 
+}
+
+.header-txt{
+    flex-basis: 40%;
+}
+
+.header-tet h1{ 
+    font-size:70px;
+    line-height:1;
+    color: #0a0508;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+
+p{
+    color: black;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.btn-1,.btn-3{
+    display: inline-block;
+    padding:10px 30px;
+    color: #f00783;
+    border:2px solid #f00783;
+    text-transform: capitalize;
+    border-radius: 15px;
+}
+
+.btn-1:hover, .btn-3:hover{
+    color: rgb(255, 254, 255);
+    background-color: #da549b;
+}
+
+.header-img{
+    flex-basis:60%;
+}
+
+.oferts{
+    padding:100px 0;
+}
+
+h2{
+    font-size:40px;
+    line-height: 1;
+    color: #0a0508;
+    margin-bottom:10px;   
+}
+
+.oferts-content{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom:30px;
+}
+
+.ofert-1{
+    flex-basis:calc(30% - 30px);
+    box-shadow: 0 0 20px rgba(0, 0, 0,.2);
+    padding:25px;
+    text-align: center;
+    background-color: #F7FAFA;
+    border:10PX;  
+}
+
+.ofert-1 img{
+    width:140px;
+    height: 170px;
+    margin-bottom:10px;
+}
+
+h3{
+    font-size: 20px;
+    line-height:1;
+    color: #0a0508;
+    margin-bottom: 10px;
+}
+
+.product-txt p{
+    margin-bottom:10px;
+}
+
+.precio{
+    color: #f00783;
+    font-weight: 700;
+    margin: bottom 20px;
+}
+
+.btn-3{
+    padding:4px 20px;
+}
+
+.logan-1{
+    flex-basis:40%;
+    background: linear-gradient(
+        rgba(0,0,0,0.2)
+        rgba(0,0,0,0.2)
+    ),
+    url(Imagenes/crema6.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    border-radius:10px;
+}
+
+.logan-1 h3{
+    font-size: 30px;
+    color: #F7FAFA;
+    text-transform: uppercase;
+}
+
+.logan-1 p{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ec6fbc;
+    margin-bottom: 20px;
+}
+
+.btn-2{
+    display: inline-block;
+    padding: 8px 30px;
+    border:1px solid #F7FAFA;
+    color: #F7FAFA;
+}
+
+.promotion{
+    padding: 80px 0;
+    background-color: #F7FAFA;
+}
+
+.promotion-content{
+    display: flex;
+}
+
+.product-txt{
+    flex-basis: 50%;
+}
+
+.promotion-img{
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.promotion-img img{
+    width: 25px;
+}
+
+.product{
+    padding: 100px 0;
+    text-align: center;
+}
+
+.product-content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.blog{
+    padding: 50px 0 100px 0;
+}
+
+.blog-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-1{
+    flex-basis: calc(33.3% - 30px);
+    margin-top: 25px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.blog-txt{
+    padding: 40px;
+}
+
+.btn-4{
+    display: inline-block;
+    border: 1px solid #0a0508;
+    padding: 8px 25px;
+    font-size: 17px;
+    text-decoration: capitalize;
+    color: #0a0508;
+}
+
+.footer{
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.link h3{
+    font-size: 17px;
+    color: #da549b;
+    margin-bottom: 10px;
+}
+
+.link a{
+    font-size: 17px;
+    color: #da549b;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.link a:hover{
+    color: #f00783;
+}
+
+@media(max-width:991px){
+
+    .menu{
+        padding: 30px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top:100%;
+        left: 0;
+        right: 0;
+        background-color: #db83b2;
+        display: none;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+    .logo{
+        display: none;
+    }
+    
+    .menu .navbar ul li a:hover{
+        color: #F7FAFA;
+    }
+
+    .header{
+        min-height: 0vh;
+        padding: 100px 30 50px 30px;
+    }
+
+    .header-content{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-tet{
+        margin-bottom: 25px;
+    }
+
+    .oferts{
+        padding: 30px;
+    }
+
+    .oferts-contet{
+        flex-direction: column;
+    }
+
+    .ofert-1{
+        margin-bottom: 30px;
+    }
+
+    .logan-1{
+        order: 2;
+        margin-bottom: 30px;
+    }
+
+    .promotion{
+        padding: 30px;
+    }
+
+    .promotion-content{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-txt{
+        margin-bottom: 25px;
+    }
+     
+    .promotion-img img{
+        width: 200px;
+    }
+
+    .product{
+        padding: 30px;
+    }
+
+    .product-content{
+
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+    }
+
+    .blog{
+        padding: 30px;
+    }
+
+    .blog-content{
+        flex-direction: column;
+    }
+
+    .footer{
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+
+
+}
+
+
+
+
